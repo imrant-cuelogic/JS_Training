@@ -1,10 +1,55 @@
 <html>
 <head>
   <script>
-     
+  //Question 1 and other sub questions
+      var a_int=1,str="Welcome", b_Bool=false;
+	  var obj={firstName:"Imran",lastName:"Tamboli"};
+	  var arr=new Array();
+	  arr[0]=a_int;
+	  arr[1]=str;
+	  arr[2]=b_Bool;
+	 function myFunction(){
+	    document.getElementById("p_Test").innerHTML=arr;
+	 }
+	 function RemoveFromArray(){
+	   arr.splice(1,1);
+	   myFunction();
+	 }
+	 function DisplayObjectData(){
+	     document.getElementById("obj_Test").innerHTML=obj.firstName +" "+obj.lastName;
+	 }
+	 function ToggleBoolean(){
+	   b_Bool=!b_Bool;
+	   displayBool();
+	 }
+	 function displayBool(){
+	    document.getElementById("obj_Bool").innerHTML=b_Bool;
+	 }
+	 
+	 //Question no 2 # Please uncomment below code
+	 //Write a program that uses at least three ways to create an object variable,array variable
+	 <!-- var obj1=new Object(){foo:"foo"}; -->
+	 <!-- var obj2={foo:"foo"}; -->
+	 <!-- var obj3={};obj3['foo']="foo"; -->
+	 
+	 <!-- var arr1=new Array("a0","a1","a2"); -->
+	 <!-- var arr2=[1,2,3]; -->
+	 <!-- var arr3=new Array(); -->
+	 
+	 
  </script>
 </head>
-<body>
-
+<body onload=" myFunction();displayBool()">
+   Array Data: <p id="p_Test" >
+	</p>
+	<button onclick="RemoveFromArray()">Remove element from array</button>
+	</br>
+	Object Data: <p id="obj_Test"></p>
+	<button onclick="DisplayObjectData()">Display Object Data</button>
+	
+	</br>
+	Bool value: <p id="obj_Bool"></p>
+	<button onclick="ToggleBoolean()">ToggleBoolean</button>
+	
 </body>
 </html>
