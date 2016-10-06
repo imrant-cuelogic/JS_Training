@@ -86,7 +86,12 @@
    
 =============================================================================
 	<br/>Day 2 Q3 & Q4 print number from 1 to 100 using all the variants of a loop structure(for,while,do while etc)
+	<br/>Q3 Reserved words program
 	
+	<br/><p id="divReserveWords" >
+	</p>
+	=== =======
+	<br/>
 	using for loop<p id="fordiv" >
 	</p>
 	using While loop<p id="whilediv" >
@@ -95,6 +100,16 @@
 	</p>
 	
 	<script>
+	
+	    var ReserveObj={
+		  var:"varData",
+		  for:"this is value of for"
+		}
+		
+		 document.getElementById("divReserveWords").innerHTML="value of ReservedObj= "+ReserveObj.for;
+	
+	
+	
 	   var i=0;
 	
 	    for(i=1;i<=100;i++){
