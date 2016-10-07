@@ -1,0 +1,90 @@
+<html>
+<head>
+  <script>
+  
+  /*
+  1. Write a program to copy two objects. It should accept two arguments - source ( the object from which we need to copy) and target ( to which we need to copy). The target object will initially be empty.
+*/
+
+  function copy_objects(Sobj1, Dobj2){
+    Dobj2 = Sobj1
+    console.log(Dobj2);
+  }
+
+  var obj1 = { name: 'test', age: 20 }
+  var obj2 = {}
+  copy_objects(obj1, obj2)
+
+
+/*
+  2. Write a program to merge two objects. It should accept two arguments - objectA and objectB. The result object will have the combined values and should not change the structure of either objectA or objectB. If both objects have same properties, consider using objectA property instead.
+*/
+
+    function mergeobjects(obj1, obj2){
+      objC = Object.assign({}, obj1, obj2)
+      console.log(objC);
+    }
+
+    var objA = { name: 'best', age: 20 }
+    var objB = { id: 1 }
+    var objC;
+    mergeobjects(objA, objB)
+
+/*
+  3. Extend number type to have a 'float()' function that will convert any given 'integer' value to its float equivalent. (a no such as 5 should become 5.00) The function should only return that value and should not affect the actual number's value.
+*/
+
+    function convertIntTofloat(intno){
+      var float_val = intno.toFixed(2);
+      console.log(float_val);
+      return float_val;
+    }
+
+    var num = 12;
+    convertIntTofloat(num);
+
+/*
+  4. Extend number type to have a 'int()' function that will convert any given 'float' value to its integer equivalent. (a no such as 5.00 should become 5). The function should only return that value and should not affect the actual number's value.
+*/
+
+    function convertFloatToInt(floatno){
+      var int_val = parseInt(floatno);
+      console.log(int_val);
+      return int_val;
+    }
+
+    var num = 12.00;
+    convertFloatToInt(num);
+
+
+	function displayLIVal(){
+	debugger
+	  var ul = document.getElementById("ul");
+var items = ul.getElementsByTagName("li");
+for (var i = 0; i < items.length; ++i) {
+         console.log(items[i].innerHTML);
+}
+	}
+	
+ </script>
+</head>
+<body onload="">
+<h3>Day3 Q1</h3>
+
+  Answer : <p id="p_Test" >
+	</p>
+	<ul id="ul">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+  <li>Butter</li>
+  <li> Butter Milk</li>
+</ul>
+	</br>
+	<button onclick="displayLIVal()">alert the value of li</button>
+	</br>
+	
+	
+	
+</body>
+</html>
