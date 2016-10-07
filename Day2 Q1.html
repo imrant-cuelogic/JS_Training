@@ -68,19 +68,30 @@
 	
 	<script>
 	
+<<<<<<< HEAD
 	var Studentclass = {
     className: "",
     StudName: "",
+=======
+	function Studentclass(className,StudName) {
+    this.className=className,
+    this.StudName=StudName,
+>>>>>>> Day1
     getInfo: function () {
         return "<b>Class Name: </b>"+this.className + '<br/><b> Stud Name:</b>' + this.StudName;
     }
 }
    <!-- //Creating student Object -->
+<<<<<<< HEAD
    var stud1=Studentclass;
    stud1.className="X";
    stud1.StudName="test1";
   
     document.getElementById("demo").innerHTML=stud1.getInfo();
+=======
+   var stud1=new Studentclass("X","test1");
+   document.getElementById("demo").innerHTML=stud1.getInfo();
+>>>>>>> Day1
   
    </script>
    
